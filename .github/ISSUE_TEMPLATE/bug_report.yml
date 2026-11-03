@@ -1,0 +1,51 @@
+name: Fehler melden / Bug report
+description: Etwas funktioniert nicht wie erwartet. / Something does not work as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für die Meldung! Am schnellsten geht es über **Kontor Shop → Protokolle → Problem melden** im Plugin – dann ist der Diagnosebericht unten schon ausgefüllt.
+        Thanks for reporting! Fastest via **Kontor Shop → Logs → Report a problem** in the plugin – the diagnostics below are then filled in.
+        **Öffentlich / Public:** keine Passwörter oder Kundendaten. No passwords or customer data.
+  - type: textarea
+    id: what
+    attributes:
+      label: Was ist passiert? / What happened?
+      description: Was hast du gemacht, was hast du erwartet, was kam stattdessen? / What did you do, what did you expect, what happened instead?
+      placeholder: |
+        1. Kasse aufgerufen, Rabattcode eingegeben …
+        2. Erwartet: … / Stattdessen: …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Bereich / Area
+      options:
+        - Shop / Warenkorb / Kasse (storefront, cart, checkout)
+        - Bestellungen / Kassa (orders, cashier)
+        - Artikel / Bestand / Lager (products, stock, warehouses)
+        - E-Mails
+        - Einstellungen / Settings
+        - Pro-Funktion / Pro feature
+        - Anderes / Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kontor Shop Version
+      placeholder: z. B. 2.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnosebericht / Diagnostics
+      description: Aus dem Plugin (Protokolle → Problem melden). Persönliche Daten sind dort bereits entfernt. / From the plugin (Logs → Report a problem); personal data already removed.
+      render: markdown
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots, sonstiges / Screenshots, anything else

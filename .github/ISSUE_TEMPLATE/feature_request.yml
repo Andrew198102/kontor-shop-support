@@ -1,0 +1,15 @@
+name: Wunsch / Feature request
+description: Idee für Kontor Shop. / An idea for Kontor Shop.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Was soll besser werden? / What should get better?
+      description: Beschreibe die Situation in deinem Verein. / Describe the situation in your club.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Vorschlag / Proposal
